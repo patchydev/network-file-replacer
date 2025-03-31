@@ -13,7 +13,7 @@ pub extern "C" fn should_replace(prob: f64) -> bool {
 pub extern "C" fn get_image_data(path_ptr: *const c_char, length: *mut usize) -> *mut u8 {
     if path_ptr.is_null() {
         return std::ptr::null_mut();
-    }            print(f"Failed to load image from {image_path}")
+    }
 
     
     let c_str = unsafe { CStr::from_ptr(path_ptr) };
